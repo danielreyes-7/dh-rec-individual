@@ -8,11 +8,11 @@ module.exports = (sequelize, DataTypes) => {
             releaseDate: DataTypes.DATE,
             length: DataTypes.INTEGER(10).UNSIGNED,
         },
-        { tableName: "episodes" }
+        { tableName: "Episodes" }
     );
     Episode.associate = function (models) {
         Episode.belongsTo(models.Season, {
-            as: "season",
+            as: "Season",
             foreignKey: "episodeId",
         });
     };

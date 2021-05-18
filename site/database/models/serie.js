@@ -6,11 +6,11 @@ module.exports = (sequelize, DataTypes) => {
             title: DataTypes.STRING,
             rating: DataTypes.FLOAT(3, 1),
         },
-        { tableName: "series" }
+        { tableName: "Series" }
     );
     Serie.associate = function (models) {
         Serie.hasMany(models.Season, {
-            as: "season",
+            as: "Season",
             foreignKey: "serieId",
         });
     };
